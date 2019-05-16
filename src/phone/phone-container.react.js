@@ -13,10 +13,12 @@ const PhoneContainer = createReactClass({
 		require('./phone.scss');
 		return (
 			<div className='cover'>
+				<div className='heading'>
+					<a className='backButton'>&#60; Back</a>
+					<span>Hotel Details</span>
+					<img src='https://i.imgur.com/ekZpAld.png' className='headingLogo'/>
+				</div>
 				<figure className='figure'>
-					<div className='heading'>
-						<h2>Hotel Details</h2>
-					</div>
 					<div className='wrap'>
 						{this._renderHotel()}
 					</div>
