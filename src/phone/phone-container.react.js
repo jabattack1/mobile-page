@@ -7,82 +7,50 @@ var createReactClass = require('create-react-class');
 
 const PhoneContainer = createReactClass({
 
-	// getInitialState() {
-	// 	return {
-	// 		messageList: []
-	// 	};
-	// },
 
 	render() {
 
 		require('./phone.scss');
-
 		return (
-			<div className="chat-container">
-				<div className="messages" ref="messagesDiv">
-					{this._renderMessages()}
-				</div>
-				<div className="message-input">
-					<input
-						type="text"
-						placeholder="Type here"
-						value={this.props.newMessage}
-						onChange={this._handleChange}
-						onKeyPress={this._checkKeyPress}
-						ref={this._focus}/>
-				</div>
-				<div className="message-button">
-					<button onClick={this._submitMessage}>Submit</button>
-				</div>
-				// <div className="count">
-				// 	{this._renderMessageCount()}
-				// </div>
+			<div className='cover'>
+				<figure className='figure'>
+					<div className='heading'>
+						<h2>Hotel Details</h2>
+					</div>
+					<div className='wrap'>
+						{this._renderHotel()}
+					</div>
+				</figure>
 			</div>
 		);
 	},
 
 
-	_renderMessages() {
-		if (this.props.messageList.length === 0) {
+	_renderHotel() {
+		if (this.props.hotelList.length === 0) {
 			return <span>No messages</span>;
 		}
-		// else {
-		// 	return this.props.messageList.map(message => {
-		// 		return <div className="message" key={message.id}>{message.content}</div>
-		// 	});
-		// }
 		else{
-			return this.props.messageList.map(function(message){
-				console.log('message');
-				console.log(message);
-				return <div key={message.id} className='message'>{message.content}</div>
+			return this.props.hotelList.map(function(hotel){
+				return (
+					<div key={hotel.id} className='hotel'>
+						<img src={hotel.photo} alt={hotel.name} className='hotelPhoto'/>
+						<p className='hotelName'>{hotel.name}</p>
+						<p className='hotelAddress'>{hotel.address}</p>
+						<p className='hotelLocation'>{hotel.city}, {hotel.state}, {hotel.zip}</p>
+						<a className='hotelNumber' href={`tel: ${ hotel.phone }`}>{hotel.phone}</a>
+					</div>
+				);
 			});
 		}
 	},
 
 	_handleChange(event) {
 		phoneActionsCreators.changeNewMessage(event.target.value);
-		// this.setState({
-		// 	newMessage: event.target.value
-		// });
 	},
 
 	_submitMessage() {
 		phoneActionsCreators.submitNewMessage();
-
-		// if (this.props.newMessage.trim().length > 0) {
-		// 	let message = {
-		// 		id: Date.now(),
-		// 		content: this.props.newMessage
-		// 	};
-
-		// 	this.props.messageList.push(message);
-
-		// 	this.setState({
-		// 		messageList: this.props.messageList,
-		// 		newMessage: ''
-		// 	});
-		// }
 	},
 
 	_checkKeyPress(event) {

@@ -10,52 +10,17 @@ class PhoneStore extends EventEmitter {
 
  		dispatcher.register(this.handleAction.bind(this));
 
- 		this._newMessage = '';
- 		// this._messageList = []
- 		this._messageList = [{id:1, content:'hello'}];
+
+ 		this._hotelList = [{id:1, photo:'https://i.imgur.com/PoQv7Oj.jpg', name:'Hilton Chicago', address:'720 South Michigan Avenue', city:'Chicago', state:'Illinois', zip:'60605', phone:'1-312-922-4400'}];
  	}
 
- 	get newMessage(){
- 		return this._newMessage;
- 	}
 
- 	get messageList(){
- 		return this._messageList;
- 	}
 
  	handleAction(action){
-
- 		console.log(action.type);
-
- 		switch(action.type){
- 			case 'change-new-message':
- 			// do something with state here
- 				this._newMessage = action.payload.content;
- 				this.emitChange();
- 				break;
-
- 			case 'submit-new-message':
-				this._checkSubmitNewMessage();	
-				this.emitChange();
- 				break;
- 		}
  	}
 
  	_checkSubmitNewMessage(){
- 		if (this._newMessage.trim().length > 0) {
-			let message = {
-				id: Date.now(),
-				content: this._newMessage
-			};
 
-			this._messageList.push(message);
-			this._newMessage = '';
-
-			// this.setState({
-			// 	messageList: this.props.messageList,
-			// 	newMessage: ''
-			// });
-		}
  	}
 
  	emitChange(){

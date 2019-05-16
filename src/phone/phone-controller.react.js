@@ -1,7 +1,6 @@
 import React from 'react';
 import phoneStore from './phone-store.js';
 import PhoneContainer from './phone-container.react'; 
-import PhoneMetrics from './phone-metrics.react';
 
 var createReactClass = require('create-react-class');
 
@@ -15,17 +14,15 @@ const PhoneController = createReactClass({
 
 	getState(){
 		return {
-			newMessage: phoneStore.newMessage,
-			messageList: phoneStore.messageList
+			hotelList: phoneStore._hotelList
 		}
 	},
 
 	render(){
-		// return <ChatContainer newMessage={this.state.newMessage} messageList={this.state.messageList />;
+		
 		return (
-			<div className='chat-controller'>
-			<PhoneContainer {...this.state} />
-			<PhoneMetrics {...this.state} />
+			<div className='phone-controller'>
+				<PhoneContainer {...this.state} />
 			</div>
 		);
 	},
