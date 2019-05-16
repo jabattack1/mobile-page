@@ -15,7 +15,7 @@ const PhoneContainer = createReactClass({
 			<div className='cover'>
 				<div className='heading'>
 					<a className='backButton'>&#60; Back</a>
-					<span>Hotel Details</span>
+					<span className='title'>Hotel Details</span>
 					<img src='https://i.imgur.com/ekZpAld.png' className='headingLogo'/>
 				</div>
 				<figure className='figure'>
@@ -41,6 +41,12 @@ const PhoneContainer = createReactClass({
 						<p className='hotelAddress'>{hotel.address}</p>
 						<p className='hotelLocation'>{hotel.city}, {hotel.state}, {hotel.zip}</p>
 						<a className='hotelNumber' href={`tel: ${ hotel.phone }`}>{hotel.phone}</a>
+
+						<div className='options'>
+							<a className='mapLink' href='maps'>Map<span className='larrow'>&#62;</span></a>
+							<a className='photoLink' href='photos'>Photo gallery<span className='larrow'>&#62;</span></a>
+							<a className='amenitiesLink' href='amenities'>Amenities<span className='larrow'>&#62;</span></a>
+						</div>
 					</div>
 				);
 			});
