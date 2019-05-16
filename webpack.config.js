@@ -9,7 +9,7 @@ module.exports = {
     devtool: 'source-map',
     context: path.join(__dirname, 'src'),
     entry: {
-        phone: './phone-app.js'
+        hotel: './hotel-app.js'
     },
     output: {
         path: path.join(__dirname, 'dist'),

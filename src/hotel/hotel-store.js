@@ -1,9 +1,9 @@
-import dispatcher from './phone-dispatcher';
+import dispatcher from './hotel-dispatcher';
 import {EventEmitter} from 'events';
 
-const chatStoreChangeEvent = 'hone-store-change-event';
+const hotelStoreChangeEvent = 'hotel-store-change-event';
 
-class PhoneStore extends EventEmitter {
+class HotelStore extends EventEmitter {
 
  	constructor(){
  		super();
@@ -24,19 +24,19 @@ class PhoneStore extends EventEmitter {
  	}
 
  	emitChange(){
- 		this.emit(chatStoreChangeEvent);
+ 		this.emit(hotelStoreChangeEvent);
  	}
 
  	addEventListener(callback){
- 		this.on('chat-store-change-event', callback);
+ 		this.on('hotel-store-change-event', callback);
  	}
 
  	removeEventListner(callback){
- 		this.removeListener(chatStoreChangeEvent, callback);
+ 		this.removeListener(hotelStoreChangeEvent, callback);
  	}
 
 }
 
-let phoneStore = new PhoneStore();
+let hotelStore = new HotelStore();
 
-export default phoneStore;
+export default hotelStore;

@@ -1,16 +1,16 @@
 import React from 'react';
-import phoneActionsCreators from './phone-actions-creators';
+import hotelActionsCreators from './hotel-actions-creators';
 
 var createReactClass = require('create-react-class');
 
 
 
-const PhoneContainer = createReactClass({
+const hotelContainer = createReactClass({
 
 
 	render() {
 
-		require('./phone.scss');
+		require('./hotel.scss');
 		return (
 			<div className='cover'>
 				<div className='heading'>
@@ -54,11 +54,11 @@ const PhoneContainer = createReactClass({
 	},
 
 	_handleChange(event) {
-		phoneActionsCreators.changeNewMessage(event.target.value);
+		hotelActionsCreators.changeNewMessage(event.target.value);
 	},
 
 	_submitMessage() {
-		phoneActionsCreators.submitNewMessage();
+		hotelActionsCreators.submitNewMessage();
 	},
 
 	_checkKeyPress(event) {
@@ -80,4 +80,4 @@ const PhoneContainer = createReactClass({
 	}
 });
 
-export default PhoneContainer;
+export default hotelContainer;
