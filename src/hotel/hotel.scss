@@ -3,166 +3,138 @@ body{
 	font-family: Helvetica;
 	margin: 0 auto;
 	width:320px;
-}
 
-.figure{
-	margin: 0 auto;
-	display: table;
-	background-image: url('./assets/background.png');
-	background-repeat:no-repeat;
-	background-position: center center;
-	flex-basis:calc(15% - 4rem);
-	flex-grow: 1;
-	flex-shrink: 0;
-	padding: 1.5rem;
-	border: 2px solid black;
-	position: relative;
-	max-width:400px;
-}
+	.heading{
+		width: calc(100%);
+		top:0;
+		padding-top:10px;
+		padding-bottom:10px;
+		margin: 0 auto;
+		text-align:center;
+		color:white;
+		background-color:black;
+		border-bottom: .5px solid #373B3F;
+		font-size:17px;
 
-.cover{
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 1200px;
-	margin: 0 auto;
-}
+		.title{
+			vertical-align:middle;
+		}
 
-.wrap{
-	width: calc(100%);
-}
+		.backButton{
+			width: 53px;
+			float:left;
+			font-weight:bold;
+			padding-top:5px;
+			padding-bottom:7px;
+			border-radius: 4px;
+		    margin-left:10px;
+		    top:0;
+		    color:white;
+		    border: .5px solid #373B3F;
+		    font-size:10px;
+		    background-image: linear-gradient(#3A3A3A, black);
+		}
 
-.heading{
-	width: calc(100%);
-	top:0;
-	padding-top:10px;
-	padding-bottom:10px;
-	margin: 0 auto;
-	text-align:center;
-	color:white;
-	background-color:black;
-	border-bottom: .5px solid #373B3F;
-	font-size:17px;
-}
+		.headingLogo{
+			width: 25px;
+			float:right;
+			padding-right:10px;
+	    	right:0;
+	    	margin-top:5px;
+		}
+	}
 
-.title{
-	/*margin-top:20px;*/
-	/*display:table-cell; */
-	vertical-align:middle;
-}
+	.figure{
+		margin: 0 auto;
+		display: table;
+		background-image: url('./assets/background.png');
+		background-repeat:no-repeat;
+		background-position: center center;
+		flex-basis:calc(15% - 4rem);
+		flex-grow: 1;
+		flex-shrink: 0;
+		padding: 1.5rem;
+		border: 2px solid black;
+		position: relative;
+		max-width:400px;
+		.cover{
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			margin: 0 auto;
+			.wrap{
+				width: calc(100%);
+			}
+		}
 
-.headingLogo{
-	width: 25px;
-	float:right;
-	padding-right:10px;
-    right:0;
-    margin-top:5px;
-}
+		.hotelPhoto{
+		margin: 0 auto;
+	    display: block;	
+	    width: calc(100%);
+	    border: 3px solid white;
+		}
 
-.backButton{
-	width: 53px;
-	float:left;
-	font-weight:bold;
-	padding-top:5px;
-	padding-bottom:7px;
-	border-radius: 4px;
-    margin-left:10px;
-    top:0;
-    color:white;
-    border: .5px solid #373B3F;
-    font-size:10px;
-    background-image: linear-gradient(#3A3A3A, black);
-}
+		.hotelName{
+			margin: 0 auto;
+			font-size:17px;
+			margin-top:20px;
+		    display: block;	
+		    color:white;
+		}
 
+		.hotelAddress{
+			margin: 0 auto;
+			padding-top:5px;
+			font-size:12px;
+		    display: block;	
+		    color:#B1BDCC;
+		}
 
+		.hotelNumber{
+			margin: 0 auto;
+			padding-top:5px;
+			font-size:12px;
+		    display: block;	
+		    color:white;
+		}
 
-.hotelPhoto{
-	margin: 0 auto;
-    display: block;	
-    width: calc(100%);
-    border: 3px solid white;
-}
+		.options{
+			margin: 0 auto;
+			display: block;
+			padding-top:20px;
+			.mapLink{
+				margin: 0 auto;
+			    display: block;	
+				text-decoration: none;
+				font-size:14px;
+				font-weight:bold;
+			    color:black;
+			    border-top-left-radius: 4px;
+			    border-top-right-radius: 4px;
+			    background-image: linear-gradient(white, #BCDBDD);
+			    padding-left:10px;
+			    padding-top:12px;
+			    padding-bottom:12px;
+			}
 
-.hotelName{
-	margin: 0 auto;
-	font-size:17px;
-	margin-top:20px;
-    display: block;	
-    color:white;
-}
+			.photoLink, .amenitiesLink{
+				margin: 0 auto;
+				text-decoration: none;
+				font-size:14px;
+				font-weight:bold;
+			    display: block;	
+			    color:black;
+			    background-image: linear-gradient(white, #BCDBDD);
+			    padding-left:10px;
+			    padding-top:12px;
+			    padding-bottom:12px;
+			}	
 
-.hotelAddress{
-	margin: 0 auto;
-	padding-top:5px;
-	font-size:12px;
-    display: block;	
-    color:#B1BDCC;
-}
-
-.hotelLocation{
-	margin: 0 auto;
-	padding-top:5px;
-	font-size:12px;
-    display: block;	
-    color:#B1BDCC;
-}
-
-.hotelNumber{
-	margin: 0 auto;
-	padding-top:5px;
-	font-size:12px;
-    display: block;	
-    color:white;
-}
-
-.options{
-	margin: 0 auto;
-	display: block;
-	padding-top:20px;
-}
-
-.mapLink{
-	margin: 0 auto;
-    display: block;	
-	text-decoration: none;
-	font-size:14px;
-	font-weight:bold;
-    color:black;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    background-image: linear-gradient(white, #BCDBDD);
-    padding-left:10px;
-    padding-top:12px;
-    padding-bottom:12px;
-}
-
-.photoLink{
-	margin: 0 auto;
-	text-decoration: none;
-	font-size:14px;
-	font-weight:bold;
-    display: block;	
-    color:black;
-    background-image: linear-gradient(white, #BCDBDD);
-    padding-left:10px;
-    padding-top:12px;
-    padding-bottom:12px;
-}
-
-.amenitiesLink{
-	margin: 0 auto;
-	text-decoration: none;
-	font-size:14px;
-	font-weight:bold;
-    display: block;	
-    color:black;
-    background-image: linear-gradient(white, #BCDBDD);
-    padding-left:10px;
-    padding-top:12px;
-    padding-bottom:12px;
+			.larrow{
+				float:right;
+				padding-right:10px;
+			    right:0;
+			}
+		}
 	}	
-
-.larrow{
-	float:right;
-	padding-right:10px;
-    right:0;
-}				
+}			

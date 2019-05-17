@@ -39,7 +39,7 @@ const hotelContainer = createReactClass({
 						<img src={hotel.photo} alt={hotel.name} className='hotelPhoto'/>
 						<p className='hotelName'>{hotel.name}</p>
 						<p className='hotelAddress'>{hotel.address}</p>
-						<p className='hotelLocation'>{hotel.city}, {hotel.state}, {hotel.zip}</p>
+						<p className='hotelAddress'>{hotel.city}, {hotel.state}, {hotel.zip}</p>
 						<a className='hotelNumber' href={`tel: ${ hotel.phone }`}>{hotel.phone}</a>
 
 						<div className='options'>
